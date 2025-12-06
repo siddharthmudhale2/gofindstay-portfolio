@@ -1,0 +1,239 @@
+.wallet-container {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem 2rem; /* increased top padding from 2rem to 4rem */
+  background-color: #f6f6f6;
+  min-height: 100vh;
+}
+
+
+.wallet-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 800px;
+
+  /* Add a simple gold border */
+  border: 2px solid #d4af37; /* classic gold color */
+  box-sizing: border-box; /* ensures padding doesn't cause overflow */
+}
+
+
+.wallet-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-box {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.wallet-box h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.green {
+  background-color: #d7f0dd;
+}
+
+.yellow {
+  background-color: #fef6cd;
+}
+
+.blue {
+  background-color: #e1edff;
+}
+
+.red {
+  background-color: #fde3e3;
+}
+
+.wallet-add-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wallet-add-section input {
+  flex: 1;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.wallet-add-section button {
+  padding: 0.7rem 1.5rem;
+  background-color: #2f80ed;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.wallet-add-section button:hover {
+  background-color: #1e6fd6;
+}
+
+.wallet-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wallet-history th,
+.wallet-history td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.wallet-history th {
+  background-color: #f2f2f2;
+  font-weight: 600;
+}
+
+.wallet-history td {
+  color: #333;
+}
+.wallet-icon {
+  margin-right: 6px;
+  vertical-align: middle;
+  color: #2f80ed;
+}
+
+.star-icon {
+  margin-right: 6px;
+  vertical-align: middle;
+  color: #f4b400;
+}
+
+/* Pulse animation for wallet */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Rotate animation for star */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+
+.add-money-button {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32); /* nice green gradient */
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px; /* pill shape */
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.add-money-button:hover {
+  background: linear-gradient(135deg, #979324, #979324);
+  box-shadow: 0 6px 15px rgba(56, 142, 60, 0.6);
+  transform: translateY(-2px);
+}
+
+.add-money-button:active {
+  background: linear-gradient(135deg, #29642c, #1B5E20);
+  box-shadow: 0 3px 8px rgba(30, 80, 30, 0.7);
+  transform: translateY(0);
+}
+
+.convert-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #f6c026;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.convert-btn:hover {
+  background-color: #f3b401;
+}
+
+.success-message {
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.signup-bonus-popup {
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex; align-items: center; justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.wallet-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.wallet-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.wallet-card {
+  animation: fadeSlideUp 0.5s ease;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.success-message {
+  transition: opacity 0.5s ease-in-out;
+}

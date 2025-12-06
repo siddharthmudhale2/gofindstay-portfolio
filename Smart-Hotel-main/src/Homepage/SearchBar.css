@@ -1,0 +1,57 @@
+.searchbar-wrapper {
+  position: relative;
+  width: 250px;
+}
+
+.searchbar-form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  height: 36px; /* Set consistent height */
+}
+
+.searchbar-input {
+  border: none;
+  outline: none;
+  padding: 0 8px; /* Adjusted for better alignment */
+  flex: 1;
+  border-radius: 20px;
+  height: 100%; /* Match parent form height */
+  font-size: 14px;
+}
+
+.searchbar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 5px; /* Minimized vertical padding */
+  height: 100%; /* Match parent form height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestions-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+}
+
+.suggestions-dropdown li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions-dropdown li:hover {
+  background-color: #f0f0f0;
+}

@@ -1,0 +1,172 @@
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--header-bg);
+  padding: 12px 24px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.admin-search {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 260px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--icon-color);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.language-selector select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 14px;
+}
+
+/* Light Theme Variables */
+:root {
+  --header-bg: #ffffff;
+  --text-color: #222;
+  --icon-color: #333;
+  --input-bg: #fff;
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+  --header-bg: #1f1f2e;
+  --text-color: #f1f1f1;
+  --icon-color: #ccc;
+  --input-bg: #2e2e3f;
+  background-color: #12121c;
+  color: var(--text-color);
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.admin-header {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.admin-search,
+.language-selector select {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[dir="rtl"] .admin-header {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .right-section {
+  flex-direction: row-reverse;
+}
+
+body[dir="rtl"] .admin-search {
+  text-align: right;
+}
+
+.logout-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.logout-confirm-box {
+  background: white;
+  padding: 24px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #333;
+}
+
+body.dark-theme .logout-confirm-box {
+  background: #2b2b3c;
+  color: #f1f1f1;
+}
+
+.logout-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logout-buttons .btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn-yes {
+  background-color: crimson;
+  color: white;
+}
+
+.btn-no {
+  background-color: #ddd;
+  color: #333;
+}
+
+body.dark-theme .btn-no {
+  background-color: #444;
+  color: white;
+}

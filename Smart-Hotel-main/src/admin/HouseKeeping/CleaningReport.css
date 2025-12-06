@@ -1,0 +1,88 @@
+.cleaning-report-page {
+  padding: 24px;
+  background: var(--main-bg, #fff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cleaning-report-page h2 {
+  color: var(--accent-color, #b83260);
+  margin-bottom: 24px;
+}
+
+.cr-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.cr-search {
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.cr-table-container {
+  background: var(--card-bg, #fff);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow-x: auto;
+}
+
+.cr-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.cr-table th, .cr-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cr-table th {
+  background: var(--sidebar-hover-bg, #f0f0f0);
+  color: var(--accent-color, #b83260);
+  font-weight: 600;
+}
+
+.cr-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+
+.cr-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cr-pagination-btn {
+  background: #b83260;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 18px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+}
+
+.cr-pagination-btn:disabled {
+  background: #eee;
+  color: #aaa;
+  cursor: not-allowed;
+  border: none;
+}

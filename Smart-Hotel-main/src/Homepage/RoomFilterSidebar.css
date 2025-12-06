@@ -1,0 +1,82 @@
+.filter-sidebar {
+  width: 270px;
+  background: #fcfcfe;
+  border-radius: 20px;
+  box-shadow: 0 6px 28px 0 #6c63ff13;
+  padding: 28px 22px;
+  margin-right: 40px;
+  position: sticky;
+  top: 32px;
+  max-height: 88vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  border: 1.5px solid #e3e8f0;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+
+.filter-section {
+  margin-bottom: 26px;
+}
+
+.filter-header {
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6c63ff 0%, #48c6ef 100%);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 2px 12px #6c63ff22;
+  margin-bottom: 8px;
+  border: none;
+  outline: none;
+}
+
+.filter-header:hover,
+.filter-header:focus {
+  background: linear-gradient(90deg, #48c6ef 0%, #6c63ff 100%);
+  color: #f6f8fb;
+  box-shadow: 0 4px 16px #6c63ff33;
+}
+
+.filter-body {
+  padding: 12px 0 0 14px;
+}
+
+.filter-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #232946;
+  transition: color 0.2s;
+  border-radius: 6px;
+  padding: 4px 6px;
+}
+
+.filter-checkbox input[type="checkbox"] {
+  accent-color: #6c63ff;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.filter-checkbox:hover,
+.filter-checkbox:focus-within {
+  color: #48c6ef;
+  background: #f0f4ff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e3e8f0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5c9d6;
+  border-radius: 8px;
+}

@@ -1,0 +1,17 @@
+.heart-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease, color 0.3s;
+  display: inline-block;
+  user-select: none;
+}
+
+.heart-icon:hover {
+  transform: scale(1.2);
+  color: #ff5a5f;
+}
+
+.heart-icon.liked {
+  color: #ff5a5f;
+}

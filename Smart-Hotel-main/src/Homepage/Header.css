@@ -1,0 +1,327 @@
+.header-section {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.inner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 100;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.main-menu li {
+  position: relative;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.drop-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.main-menu li:hover .drop-menu {
+  display: block;
+}
+
+.drop-menu li a {
+  padding: 8px 15px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+}
+
+/* Filter styles */
+.filter-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-icon {
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.filter-menu .drop-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  color: black;
+  list-style: none;
+  padding: 10px 0;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  min-width: 160px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+}
+
+.filter-menu:hover .drop-menu {
+  display: block;
+}
+
+/* Search bar */
+.header-search-form {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.header-search-form input {
+  border: none;
+  padding: 8px 12px;
+  outline: none;
+  width: 200px;
+}
+
+.header-search-form button {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Login/Profile section */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Login Dropdown */
+.login-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background-color: white;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  list-style: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.login-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 8px 15px;
+  color: black;
+  text-decoration: none;
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 1000;
+  padding: 20px;
+  display: none;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  margin-bottom: 15px;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 0;
+}
+
+.mobile-menu .submenu {
+  padding-left: 15px;
+  background-color: rgba(255,255,255,0.1);
+  margin-top: 5px;
+}
+
+.mobile-toggle {
+  display: none;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .main-menu, .filter-menu {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .mobile-toggle button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .header-search-form {
+    margin: 0;
+    width: 100%;
+    order: 3;
+    margin-top: 10px;
+  }
+  
+  .inner-header {
+    flex-wrap: wrap;
+  }
+  
+  .header-search-form input {
+    width: 100%;
+  }
+}
+
+.otp-login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.otp-login-button:hover {
+  background-color: #0056b3;
+}
+
+.wallet-panel {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- New styles to improve user dropdown spacing --- */
+
+.profile-dropdown ul {
+  min-width: 140px; /* Ensure dropdown width so links don't look cramped */
+}
+
+.profile-dropdown li {
+  padding: 12px 20px;      /* Increase vertical and horizontal padding */
+  white-space: nowrap;     /* Prevent text wrapping */
+  border-bottom: 1px solid #eee; /* subtle separator for items */
+}
+
+.profile-dropdown li:last-child {
+  border-bottom: none;     /* Remove border from last item */
+}
+
+.profile-dropdown li a {
+  display: block;
+  color: #007bff;          /* Blue color for links like "My Wallet" */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 4px 0;          /* vertical padding inside links */
+}
+
+.profile-dropdown li a:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
